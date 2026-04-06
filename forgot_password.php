@@ -14,7 +14,7 @@ if (isset($_POST['request_reset'])) {
         // Generate a simple unique ID for the reset link
         $token = bin2hex(random_bytes(16)); 
         
-        // Save token to DB (You might need to add a 'reset_token' column to your table)
+        // Save token to DB 
         $conn->query("UPDATE users SET reset_token = '$token' WHERE user_id = '$user_id'");
 
         echo "<div style='background:#d4edda; padding:15px; border:1px solid #c3e6cb;'>
