@@ -3,7 +3,7 @@ session_start();
 include 'config.php';
 
 // 1. SECURITY CHECK
-// This prevents regular customers from typing 'admin.php' to see THE data.
+
 
 if (!isset($_SESSION['username']) || $_SESSION['username'] !== 'AdminName') {
     header("Location: login.php");
