@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $_POST['username'];
     $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
     
-    // This line matches the table we just created
+   
     $sql = "INSERT INTO users (username, password) VALUES ('$user', '$pass')";
     
     if (mysqli_query($conn, $sql)) {
