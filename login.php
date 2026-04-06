@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['username'] = $row['username'];
 
         // --- ADMIN RECOGNITION LOGIC ---
-        // Replace 'AdminName' with your actual registered admin username
+        
         if ($row['username'] === 'AdminName') {
             // Send you to the management panel
             header("Location: admin.php");
