@@ -3,15 +3,15 @@ session_start();
 include 'config.php';
 
 // 1. SECURITY CHECK
-// This prevents regular customers from typing 'admin.php' to see your data.
-// Replace 'AdminName' with your exact registered username.
+// This prevents regular customers from typing 'admin.php' to see THE data.
+
 if (!isset($_SESSION['username']) || $_SESSION['username'] !== 'AdminName') {
     header("Location: login.php");
     exit();
 }
 
 // 2. FETCH ALL BOOKINGS
-// We pull the customer_name we saved and link it to the ponds table for details.
+
 $sql = "SELECT bookings.id AS b_id, 
                bookings.customer_name, 
                ponds.id AS p_id, 
