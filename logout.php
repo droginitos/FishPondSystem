@@ -1,6 +1,6 @@
 <?php
 session_start();
-session_destroy(); // Safely clears william mugo's or any user's session
+session_destroy(); // Safely clears  any user's session
 ?>
 
 <!DOCTYPE html>
